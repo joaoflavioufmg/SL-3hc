@@ -1,11 +1,14 @@
 
-# Three-Level Hierarchical Health Care planning model to increase accessibility and equity on municipality level
+# Three-Level Hierarchical Health Care Planning Model to Increase Accessibility and Equity at the Municipality Level
 
-Este projeto utiliza o **GLPK (GNU Linear Programming Kit)** para resolver um problema de localização de unidades de saúde no município de Sete Lagoas – MG. O modelo foi construído com base em critérios de equidade, cobertura, custo e capacidade instalada, visando à organização racional da Rede de Atenção Primária à Saúde (APS).
+Supplementary material for the manuscript entitled "Planning for equitable access to integrated public health services in a Brazilian municipality", for SBPO Annals. Reference: .
+
+This project uses the **GLPK (GNU Linear Programming Kit)** to solve a health facility location problem in the municipality of Sete Lagoas – MG. The model was built based on equity, coverage, cost, and installed capacity criteria, aiming at the rational organization of the Primary Health Care Network (APS).
 
 ---
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
+
 
 ```
 Planejamento_APS_SeteLagoas/
@@ -13,24 +16,25 @@ Planejamento_APS_SeteLagoas/
 │   └── hc.mod
 ├── data/
 │   └── SL.dat
-├── images/
-│   └── localizacao_novas_unidades.png
+├── img/
+│   └── novas_UBS.png
 ├── README.md
 ```
 
----
-
-## 📌 Objetivo
-
-Propor um plano de localização para unidades de saúde que atenda à demanda da população, respeitando os critérios de cobertura geográfica e capacidade das equipes, com foco principal na APS.
 
 ---
 
-## ▶️ Como Executar
+## 📌 Objective
 
-1. Instale o GLPK: https://www.gnu.org/software/glpk/
+To propose a health facility location plan that meets population demand while respecting geographic coverage and team capacity criteria, with a primary focus on Primary Health Care (APS).
 
-2. Execute no terminal:
+---
+
+## ▶️ How to Run
+
+1. Install GLPK: https://www.gnu.org/software/glpk/
+
+2. Run in the terminal:
 
 ```bash
 glpsol -m hc.mod -d SL.dat --cuts
@@ -38,17 +42,17 @@ glpsol -m hc.mod -d SL.dat --cuts
 
 ---
 
-## 📊 Resultados da Modelagem
+## 📊 Modeling Results
 
-### Análise dos Resultados
+### Analysis of Results
 
-A solução ótima respeita as restrições do modelo e garante cobertura universal da APS. A seguir estão os principais resultados:
+The optimal solution respects the model's constraints and guarantees universal APS coverage. The main results are presented below:
 
-### Caracterização Financeira
+### Financial Characterization
 
-**Custo APS:** R$ 105.851.181,35 (necessidade de investimento de R$ 15.451.205,35)
+**APS Cost:** R$ 105.851.181,35 (investiment need of R$ 15.451.205,35)
 
-| Parâmetros (*resultados da otimização)    | Valor (R$)         |
+| Parameters (*optimization results)    | Value (R$)         |
 |-------------------------------------------|--------------------|
 | Receita do município (2025)               | 1.635.941.154,00      |
 | Orçamento para Saúde (2025)               | 583.933.738,00      |
@@ -68,17 +72,17 @@ A solução ótima respeita as restrições do modelo e garante cobertura univer
 
 ---
 
-### Novas Unidades Criadas
+### New Units Created
 
-12 de 15 localidades candidatas foram selecionadas.
+12 out of 15 candidate locations were selected.
 
 ![Figura – Localização das Novas Unidades de Atenção Primária](img/novas_UBS.png)
 
 ---
 
-### Novas Equipes
+### New Teams
 
-15 novas equipes foram alocadas.
+15 new teams were allocated.
 
 | Unidade | Nº eSFs | ME1 | EF1 | TE1 | ACS | DE1 | TD1 |
 |---------|---------|-----|-----|-----|-----|-----|-----|
@@ -88,18 +92,18 @@ A solução ótima respeita as restrições do modelo e garante cobertura univer
 
 ---
 
-### Equipes Existentes
+### Existing Teams
 
-- Boa distribuição de médicos, enfermeiros e técnicos
-- Déficit na Equipe de Saúde Bucal
-- ACSs com distribuição desigual
-- eMulti estável e fortalecida por políticas federais
+- Good distribution of physicians, nurses, and technicians
+- Deficit in Oral Health Teams
+- Uneven distribution of CHWs (ACS)
+- eMulti stable and strengthened by federal policies
 
 ---
 
-### Capacidade Utilizada
+### Capacity Utilization
 
-#### APS – Utilização próxima de 100%
+#### APS – Utilization close to 100%
 
 | Unidade | Capacidade Total | Utilizada | % |
 |---------|------------------|-----------|----|
@@ -107,20 +111,18 @@ A solução ótima respeita as restrições do modelo e garante cobertura univer
 | PHC2    | 6000             | 6000      |100%|
 | ...     | ...              | ...       |... |
 
-*Nota: existe margem caso use-se o teto de 3.500 pessoas por UBS.*
+*Note: There is some slack if the ceiling of 3,500 people per UBS is used.*
 
-#### SHC – Subutilização de 2% a 75%  
-#### THC – Subutilização alta, mas explicada por limitações do modelo
-
----
+#### SHC – Underutilization of 2% to 75%
+#### THC – High underutilization, but explained by model limitations
 
 ---
 
-## 📜 Licença
+## 📜 License
 
 MIT
 
-## ✉️ Contato
+## ✉️ Contact
 João Flávio F. Almeida  
 📧 [joao.flavio@dep.ufmg](mailto:joao.flavio@dep.ufmg)
 
