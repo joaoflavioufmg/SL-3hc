@@ -72,7 +72,7 @@ A solução ótima respeita as restrições do modelo e garante cobertura univer
 
 12 de 15 localidades candidatas foram selecionadas.
 
-![Figura 9 – Localização das Novas Unidades de Atenção Primária](img/novas_UBS.png)
+![Figura – Localização das Novas Unidades de Atenção Primária](img/novas_UBS.png)
 
 ---
 
