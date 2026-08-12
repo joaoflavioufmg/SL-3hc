@@ -1,7 +1,7 @@
 
-# Three-Level Hierarchical Health Care Planning Model to Increase Accessibility and Equity at the Municipality Level
+# A Hierarchical Location-Allocation Model for Municipal Healthcare Planning in the Brazilian Unified Health System
 
-Supplementary material for the manuscript entitled "Planning for equitable access to integrated public health services in a Brazilian municipality", for SBPO Annals. Reference: .
+Supplementary material for the manuscript entitled "A Hierarchical Location-Allocation Model for Municipal Healthcare Planning in the Brazilian Unified Health System". Reference: .
 
 This project uses the **GLPK (GNU Linear Programming Kit)** to solve a health facility location problem in the municipality of Sete Lagoas – MG. The model was built based on equity, coverage, cost, and installed capacity criteria, aiming at the rational organization of the Primary Health Care Network (APS).
 
@@ -52,29 +52,29 @@ The optimal solution respects the model's constraints and guarantees universal A
 
 **APS Cost:** R$ 105.851.181,35 (investiment need of R$ 15.451.205,35)
 
-| Parameters (*optimization results)    | Value (R$)         |
+| Parameters (*optimisation results)    | Value (R$)         |
 |-------------------------------------------|--------------------|
-| Receita do município (2025)               | 1.635.941.154,00      |
-| Orçamento para Saúde (2025)               | 583.933.738,00      |
-| Orçamento Média-Alta complexidade (2025)  | 412.423.111,00      | 
-| Orçamento MAC (ajustado p/ modelo) (2025)  | 282.993.086,00      | 
+| Municipal revenue (2025)               | 1,635,941,154.00      |
+| Health budget (2025)               | 583,933,738.00      |
+| Medium-to-High Complexity Budget (2025)  | 412,423,111.00      |
+| MAC Budget (adjusted for model) (2025)  | 282,993,086.00      |
 |-------------------------------------------|--------------------|
-| PHC-Orçamento Atenção Básica (2025)       | 90.399.976,00     |
+| PHC – Primary Care Budget (2025)       | 90,399,976.00     |
 |-------------------------------------------|--------------------|
-| *Custo Logístico                            | 491.250,15         |
-| *Custo Fixo Unidades Existentes [E]         | 42.900.000,00      |
-| *Custo Fixo Novas Unidades [C]              | 9.360.000,00         |
-| *Custo de Nova Equipe [C]                   | 8.698.519,20         |
-| *Custo Variável                              | 44.401.412,00     |
+| *Logistics Cost                            | 491,250.15         |
+| *Fixed Costs for Existing Units [E]         | 42,900,000.00      |
+| *Fixed Costs for New Units [C]              | 9,360,000.00         |
+| *Cost of New Staff [C]                   | 8,698,519.20         |
+| *Variable Cost                              | 44,401,412.00     |
 |-------------------------------------------|--------------------|
-| *PHC-Custo Atenção Básica (2025)       | 105.851.181,35     |
+| *PHC – Primary Care Cost (2025)       | 105,851,181.35     |
 |-------------------------------------------|--------------------|
 
 ---
 
 ### New Units Created
 
-12 out of 15 candidate locations were selected.
+12-15 candidate locations were selected (On Monte Carlo Simulation).
 
 ![Figura – Localização das Novas Unidades de Atenção Primária](img/novas_UBS.png)
 
